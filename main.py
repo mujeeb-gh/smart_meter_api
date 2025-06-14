@@ -78,6 +78,10 @@ def create_sequence(data_buffer):
     sequence = sequence[-TIME_STEPS:].reshape(1, TIME_STEPS, FEATURES)
     return sequence
 
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the Smart Meter AI API"}
+
 @app.post("/data")
 async def store_reading(data: SensorData):
     """Endpoint for ESP32 to send sensor readings."""
