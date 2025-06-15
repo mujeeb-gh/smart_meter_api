@@ -194,5 +194,5 @@ cython_debug/
 .cursorindexingignore
 
 data/
-models/
+# models/
 .vercel
